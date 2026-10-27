@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="202" viewBox="0 0 1200 202" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Three areas, one builder mindset</title>
+  <desc id="desc">AI workflows: MathModel Run. Data products: PathOS. Learning tools: Yike Vocab.</desc>
+  <rect x="1" y="1" width="1198" height="200" rx="16" fill="#14211F" stroke="#354B43"/>
+  <path d="M400 25V177M800 25V177" stroke="#354B43"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <g transform="translate(30 0)">
+      <text x="0" y="36" fill="#8FA79A" font-size="11" letter-spacing="2">01 / AI WORKFLOWS</text>
+      <path d="M2 71H38M20 53V89M7 58L33 84M7 84L33 58" stroke="#C6EDAE" stroke-width="1.8"/>
+      <text x="0" y="128" fill="#ECF2E8" font-size="25" font-weight="700" letter-spacing="-.5">Make reasoning traceable.</text>
+      <text x="0" y="159" fill="#A6B8AC" font-size="15">Models → experiments → evidence</text>
+      <text x="0" y="183" fill="#C6EDAE" font-size="12">MATHMODEL RUN</text>
+    </g>
+    <g transform="translate(430 0)">
+      <text x="0" y="36" fill="#8FA79A" font-size="11" letter-spacing="2">02 / DATA PRODUCTS</text>
+      <path d="M0 60L12 53L27 62L39 55V84L27 91L12 82L0 89V60ZM12 53V82M27 62V91" stroke="#AADACF" stroke-width="1.8" stroke-linejoin="round"/>
+      <text x="0" y="128" fill="#ECF2E8" font-size="25" font-weight="700" letter-spacing="-.5">Make complexity usable.</text>
+      <text x="0" y="159" fill="#A6B8AC" font-size="15">Maps → data contracts → interfaces</text>
+      <text x="0" y="183" fill="#AADACF" font-size="12">PATHOS</text>
+    </g>
+    <g transform="translate(830 0)">
+      <text x="0" y="36" fill="#8FA79A" font-size="11" letter-spacing="2">03 / LEARNING TOOLS</text>
+      <rect x="0" y="57" width="35" height="31" rx="4" stroke="#EAC99D" stroke-width="1.8"/>
+      <path d="M9 67H26M9 74H22M9 81H18" stroke="#EAC99D" stroke-width="1.8"/>
+      <text x="0" y="128" fill="#ECF2E8" font-size="25" font-weight="700" letter-spacing="-.5">Make learning focused.</text>
+      <text x="0" y="159" fill="#A6B8AC" font-size="15">Local data → study → review</text>
+      <text x="0" y="183" fill="#EAC99D" font-size="12">YIKE VOCAB</text>
+    </g>
+  </g>
+</svg>

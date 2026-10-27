@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="410" viewBox="0 0 1200 410" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Yike — Build with curiosity. Ship with evidence.</title>
+  <desc id="desc">A technical profile banner with a systems diagram and an AI, modeling, and web engineering focus.</desc>
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#29413F" stroke-opacity=".35"/></pattern>
+    <linearGradient id="glow" x1="770" y1="0" x2="1200" y2="410" gradientUnits="userSpaceOnUse"><stop stop-color="#163D37"/><stop offset="1" stop-color="#102621"/></linearGradient>
+  </defs>
+  <rect width="1200" height="410" rx="20" fill="#101C1B"/>
+  <path d="M778 0H1180C1191 0 1200 9 1200 20V390C1200 401 1191 410 1180 410H778V0Z" fill="url(#glow)"/>
+  <rect x="778" width="422" height="410" fill="url(#grid)"/>
+  <path d="M778 0V410" stroke="#35534C"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="48" y="49" fill="#B5CDC5" font-size="13" letter-spacing="2.8">YIKE / ENGINEERING NOTES</text>
+    <rect x="48" y="83" width="74" height="26" rx="13" fill="#253A33"/>
+    <circle cx="63" cy="96" r="3.5" fill="#B9E7AD"/>
+    <text x="74" y="100" fill="#CDE7C3" font-size="11" letter-spacing="1">BUILDER</text>
+    <text x="45" y="182" fill="#F3F3E9" font-size="57" font-weight="700" letter-spacing="-2">Build with curiosity.</text>
+    <text x="45" y="249" fill="#C6EDAE" font-size="57" font-weight="700" letter-spacing="-2">Ship with evidence.</text>
+    <text x="48" y="293" fill="#A9BCB5" font-size="17">Applied AI. Mathematical modeling. Useful software.</text>
+    <path d="M48 331H727" stroke="#35473F"/>
+    <text x="48" y="368" fill="#D6E1D8" font-size="12" letter-spacing="1.8">QUESTION</text>
+    <path d="M145 364H179M174 360L179 364L174 368" stroke="#748C80"/>
+    <text x="201" y="368" fill="#D6E1D8" font-size="12" letter-spacing="1.8">MODEL</text>
+    <path d="M280 364H314M309 360L314 364L309 368" stroke="#748C80"/>
+    <text x="336" y="368" fill="#D6E1D8" font-size="12" letter-spacing="1.8">SYSTEM</text>
+    <path d="M419 364H453M448 360L453 364L448 368" stroke="#748C80"/>
+    <text x="475" y="368" fill="#D6E1D8" font-size="12" letter-spacing="1.8">VERIFICATION</text>
+    <text x="815" y="49" fill="#89AFA1" font-size="11" letter-spacing="2">SYSTEM / 001</text>
+    <rect x="815" y="80" width="348" height="260" rx="14" fill="#142C26" stroke="#466355"/>
+    <circle cx="837" cy="102" r="3" fill="#7B9A84"/><circle cx="849" cy="102" r="3" fill="#7B9A84"/><circle cx="861" cy="102" r="3" fill="#7B9A84"/>
+    <path d="M815 122H1163" stroke="#3B5648"/>
+    <text x="1081" y="106" fill="#9CBCA5" font-size="10" letter-spacing="1">profile.yml</text>
+  </g>
+  <g font-family="monospace" font-size="15">
+    <text x="839" y="158" fill="#8BAE99">name: <tspan fill="#DCEBCF">Yike</tspan></text>
+    <text x="839" y="192" fill="#8BAE99">focus:</text>
+    <text x="855" y="222" fill="#DCEBCF">- applied_ai</text>
+    <text x="855" y="249" fill="#DCEBCF">- mathematical_modeling</text>
+    <text x="855" y="276" fill="#DCEBCF">- web_engineering</text>
+    <text x="839" y="314" fill="#BDDFA7">principle: make_it_verifiable</text>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#9FBBA9" letter-spacing="1.3">
+    <text x="815" y="375">LEARN → BUILD → CHECK → ITERATE</text>
+  </g>
+</svg>
