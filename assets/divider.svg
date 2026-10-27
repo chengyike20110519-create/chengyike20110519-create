@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="8" viewBox="0 0 1200 8" role="presentation">
-  <defs><linearGradient id="rule"><stop stop-color="#6ca9ff"/><stop offset=".38" stop-color="#6ca9ff" stop-opacity=".45"/><stop offset="1" stop-color="#6ca9ff" stop-opacity=".06"/></linearGradient></defs>
-  <rect y="3" width="1200" height="2" rx="1" fill="url(#rule)"/>
-  <circle cx="4" cy="4" r="3.5" fill="#6ca9ff"/>
+<style>@media(prefers-reduced-motion:reduce){.animated{display:none}}</style>
+<defs><linearGradient id="pulse"><stop stop-color="#6ca9ff" stop-opacity="0"/><stop offset=".7" stop-color="#6ca9ff" stop-opacity=".55"/><stop offset="1" stop-color="#79c0ff"/></linearGradient></defs>
+<rect y="3" width="1200" height="2" rx="1" fill="#6ca9ff" opacity=".22"/>
+<g class="animated"><rect x="-180" y="3" width="180" height="2" rx="1" fill="url(#pulse)"><animate attributeName="x" from="-180" to="1200" dur="6s" repeatCount="indefinite"/></rect>
+<circle cx="0" cy="4" r="3" fill="#6ca9ff"><animate attributeName="cx" from="0" to="1200" dur="6s" repeatCount="indefinite"/></circle></g>
 </svg>

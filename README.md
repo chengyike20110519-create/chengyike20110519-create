@@ -7,7 +7,7 @@
 </td>
 <td width="68%" valign="middle">
   <h1>Hi, I'm Yike.</h1>
-  <p><strong>Stay curious. Make it real.</strong></p>
+  <p><img src="assets/typing.svg" width="460" height="42" alt="Stay curious. Make it real. — From questions to working tools."></p>
   <p>Student developer and Matrix Nova founder. I build with AI, mathematical modeling, and the web.</p>
   <p>I like turning a question into a working tool—and helping other young people do the same.</p>
   <p>
@@ -18,7 +18,7 @@
 </tr>
 </table>
 
-<img src="assets/divider.svg" width="100%" height="8" alt="">
+<img src="assets/divider.svg?motion=1" width="100%" height="8" alt="">
 
 ## Selected work
 
@@ -52,5 +52,4 @@ I help build **Matrix Nova**, a student-led community for learning and creating 
 | AI & research | Agent workflows · mathematical modeling · reproducible experiments · LaTeX |
 
 <br>
-<img src="assets/divider.svg" width="100%" height="8" alt="">
-<p align="center"><samp>stay curious → build → learn → share</samp></p>
+<img src="assets/footer.svg" width="100%" alt="Ask → Build → Check → Share">

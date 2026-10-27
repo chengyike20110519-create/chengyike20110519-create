@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="86" viewBox="0 0 1200 86" role="img" aria-labelledby="title desc">
+<title id="title">Ask. Build. Check. Share.</title><desc id="desc">A gently animated blue light connects four steps in Yike's creative process.</desc>
+<style>
+:root{--bg:#f6f8fa;--line:#d0d7de;--ink:#57606a;--accent:#0969da} text{font:16px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:2px;fill:var(--ink)} .node{fill:var(--bg);stroke:var(--accent);stroke-width:2} .ring{fill:none;stroke:var(--accent);stroke-width:1.5}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1117;--line:#30363d;--ink:#a5b4c5;--accent:#79c0ff}}
+@media(prefers-reduced-motion:reduce){.animated{display:none}}
+</style>
+<rect x=".5" y=".5" width="1199" height="85" rx="12" fill="var(--bg)" stroke="var(--line)"/>
+<path d="M80 29H1120" stroke="var(--line)" stroke-width="1.5"/>
+<g><circle cx="80" cy="29" r="6" class="node"/>
+<circle class="animated ring" cx="80" cy="29" r="7" opacity="0"><animate attributeName="r" values="7;17" dur="2.4s" begin="0.0s" repeatCount="indefinite"/><animate attributeName="opacity" values=".45;0" dur="2.4s" begin="0.0s" repeatCount="indefinite"/></circle>
+<text x="80" y="66" text-anchor="middle">ASK</text></g><g><circle cx="427" cy="29" r="6" class="node"/>
+<circle class="animated ring" cx="427" cy="29" r="7" opacity="0"><animate attributeName="r" values="7;17" dur="2.4s" begin="0.6s" repeatCount="indefinite"/><animate attributeName="opacity" values=".45;0" dur="2.4s" begin="0.6s" repeatCount="indefinite"/></circle>
+<text x="427" y="66" text-anchor="middle">BUILD</text></g><g><circle cx="773" cy="29" r="6" class="node"/>
+<circle class="animated ring" cx="773" cy="29" r="7" opacity="0"><animate attributeName="r" values="7;17" dur="2.4s" begin="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values=".45;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></circle>
+<text x="773" y="66" text-anchor="middle">CHECK</text></g><g><circle cx="1120" cy="29" r="6" class="node"/>
+<circle class="animated ring" cx="1120" cy="29" r="7" opacity="0"><animate attributeName="r" values="7;17" dur="2.4s" begin="1.7999999999999998s" repeatCount="indefinite"/><animate attributeName="opacity" values=".45;0" dur="2.4s" begin="1.7999999999999998s" repeatCount="indefinite"/></circle>
+<text x="1120" y="66" text-anchor="middle">SHARE</text></g>
+<circle class="animated" r="3.5" fill="var(--accent)"><animateMotion path="M80 29H1120" dur="8s" repeatCount="indefinite"/></circle>
+</svg>
