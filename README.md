@@ -1,11 +1,8 @@
 <p align="center">
-  <img src="assets/yike-cheng.png" alt="Yike Cheng" width="100%">
+  <img src="assets/yike-cheng.png" alt="Yike Cheng — Stay curious. Make it real." width="100%">
 </p>
 
-<h1 align="center">Yike Cheng</h1>
-
 <p align="center">
-  <strong>Stay curious. Make it real.</strong><br>
   <sub>Student developer · Matrix Nova founder · AI &amp; mathematical modeling</sub>
 </p>
 
