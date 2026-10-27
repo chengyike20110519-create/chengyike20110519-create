@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <img src="assets/yike-cheng.png" alt="Yike Cheng — Question Everything. Create Something." width="100%">
+</p>
+
+<p align="center">
   <a href="#selected-work">Selected work</a> &nbsp; / &nbsp;
   <a href="#technical-toolkit">Technical toolkit</a> &nbsp; / &nbsp;
   <a href="#how-i-build">How I build</a> &nbsp; / &nbsp;
@@ -11,9 +15,13 @@
 
 ## A little about me
 
-I'm **Yike**, a student developer working across **applied AI, mathematical modeling, and web engineering**. I like turning complicated questions into systems people can actually use—from reproducible modeling workflows to interactive data products and tools for learning.
+I'm **Yike Cheng**, a student developer and **Matrix Nova founder**, working across **applied AI, mathematical modeling, and web engineering**. I like turning questions into working projects—from reproducible modeling workflows to interactive data products and tools for learning.
 
-My interests connect at one point: **understand the problem, build the system, verify the result.**
+At **Matrix Nova**, I help bring young people together to learn, build, and share what they create. Our Learnathon (学客松) is about making your own ideas real while connecting with other builders.
+
+I move between research and product: build the model, run the experiment, design the interface, and check what actually works. MathModel Run, PathOS, and Yike Vocab are three ways I put that into practice.
+
+**Question everything. Create something.**
 
 <p align="center">
   <img src="assets/focus.svg" alt="Three connected areas: AI workflows, data products, and tools for learning." width="100%">
