@@ -7,7 +7,12 @@
 </td>
 <td width="68%" valign="middle">
   <h1>Hi, I'm Yike.</h1>
-  <p><img src="assets/typing.svg" width="460" height="42" alt="Stay curious. Make it real. — From questions to working tools."></p>
+  <p><picture>
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/typing-dark.png">
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/typing-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/typing-dark.gif">
+    <img src="assets/typing-light.gif" width="460" height="42" alt="Stay curious. Make it real. — From questions to working tools.">
+  </picture></p>
   <p>Student developer and Matrix Nova founder. I build with AI, mathematical modeling, and the web.</p>
   <p>I like turning a question into a working tool—and helping other young people do the same.</p>
   <p>

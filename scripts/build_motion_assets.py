@@ -1,50 +1,52 @@
-from html import escape
 from pathlib import Path
 import xml.etree.ElementTree as ET
 
 ASSETS = Path(__file__).resolve().parents[1] / 'assets'
 ASSETS.mkdir(exist_ok=True)
-TOTAL = 18
 PHRASES = ['Stay curious. Make it real.', 'From questions to working tools.', 'AI / Mathematical modeling / Web']
 
-def events(text, start):
-    count = len(text)
-    points = [(0, 0), (start, 0)]
-    points += [(start + 1.8 * n / count, n * 12) for n in range(1, count + 1)]
-    points.append((start + 4.25, count * 12))
-    points += [(start + 4.25 + .65 * n / count, (count - n) * 12) for n in range(1, count + 1)]
-    points.append((TOTAL, 0))
-    return points
+# Each GIF frame is flattened from a single text string, so unsupported SVG
+# clipping or animation cannot reveal several overlapping slogans.
+from PIL import Image, ImageDraw, ImageFont
 
-definitions = []
-groups = []
-for index, text in enumerate(PHRASES):
-    start = index * 6 + .25
-    points = events(text, start)
-    times = ';'.join(f'{time / TOTAL:.6f}' for time, _ in points)
-    widths = ';'.join(str(width) for _, width in points)
-    cursor = ';'.join(str(width + 7) for _, width in points)
-    definitions.append(f'''<clipPath id="line-{index}"><rect x="7" y="0" width="0" height="42"><animate attributeName="width" values="{widths}" keyTimes="{times}" calcMode="discrete" dur="18s" repeatCount="indefinite"/></rect></clipPath>''')
-    groups.append(f'''<g class="animated">
-  <text x="7" y="29" clip-path="url(#line-{index})">{escape(text)}</text>
-  <g opacity="0"><animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;{start/TOTAL:.6f};{(start+4.9)/TOTAL:.6f};{(start+5.2)/TOTAL:.6f};1" calcMode="discrete" dur="18s" repeatCount="indefinite"/>
-    <rect x="7" y="10" width="2" height="22"><animate attributeName="x" values="{cursor}" keyTimes="{times}" calcMode="discrete" dur="18s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.45;.5;1" calcMode="discrete" dur="1s" repeatCount="indefinite"/></rect>
-  </g>
-</g>''')
+FONT = ImageFont.truetype('/System/Library/Fonts/Supplemental/Andale Mono.ttf', 40)
+SIZE = (920, 84)
+THEMES = {'light': ('#ffffff', '#0969da'), 'dark': ('#0d1117', '#79c0ff')}
 
-typing = f'''<svg xmlns="http://www.w3.org/2000/svg" width="460" height="42" viewBox="0 0 460 42" role="img" aria-labelledby="title desc">
-<title id="title">Stay curious. Make it real.</title>
-<desc id="desc">Typing animation cycling through a personal motto, turning questions into tools, and AI, mathematical modeling and web development.</desc>
-<style>
-text,rect{{fill:#0969da}} text{{font:20px ui-monospace,SFMono-Regular,Consolas,monospace}} .static{{display:none}}
-@media(prefers-color-scheme:dark){{text,rect{{fill:#79c0ff}}}}
-@media(prefers-reduced-motion:reduce){{.animated{{display:none}}.static{{display:inline}}}}
-</style>
-<defs>{''.join(definitions)}</defs>
-{''.join(groups)}
-<text class="static" x="7" y="29">{escape(PHRASES[0])}</text>
-</svg>
-'''
+def draw_frame(text, background, ink, cursor=True):
+    frame = Image.new('RGB', SIZE, background)
+    draw = ImageDraw.Draw(frame)
+    draw.text((14, 58), text, font=FONT, fill=ink, anchor='ls')
+    x = round(14 + draw.textlength(text, font=FONT))
+    assert x + 6 < SIZE[0], 'Slogan exceeds available space'
+    if cursor:
+        draw.rectangle((x + 3, 20, x + 6, 63), fill=ink)
+    return frame
+
+# Start with a readable full slogan. During transitions only one prefix is drawn.
+sequence = []
+for index, phrase in enumerate(PHRASES):
+    if index:
+        sequence.extend((phrase[:n], 60, True) for n in range(1, len(phrase) + 1))
+    for _ in range(3):
+        sequence.extend([(phrase, 350, True), (phrase, 350, False)])
+    sequence.extend((phrase[:n], 30, True) for n in range(len(phrase) - 1, -1, -1))
+sequence.extend((PHRASES[0][:n], 60, True) for n in range(1, len(PHRASES[0])))
+
+for theme, (background, ink) in THEMES.items():
+    frames = [draw_frame(text, background, ink, cursor) for text, _, cursor in sequence]
+    path = ASSETS / f'typing-{theme}.gif'
+    frames[0].save(path, save_all=True, append_images=frames[1:],
+                   duration=[duration for _, duration, _ in sequence],
+                   loop=0, disposal=2, optimize=True)
+    draw_frame(PHRASES[0], background, ink, cursor=False).save(ASSETS / f'typing-{theme}.png')
+    with Image.open(path) as check:
+        assert check.n_frames > 100 and check.size == SIZE
+        for frame in range(check.n_frames):
+            check.seek(frame)
+            check.convert('RGB').load()
+    print(path.name, path.stat().st_size, 'bytes')
+(ASSETS / 'typing.svg').unlink(missing_ok=True)
 
 divider = '''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="8" viewBox="0 0 1200 8" role="presentation">
 <style>@media(prefers-reduced-motion:reduce){.animated{display:none}}</style>
@@ -75,7 +77,7 @@ footer = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="86" vi
 </svg>
 '''
 
-for filename, content in [('typing.svg', typing), ('divider.svg', divider), ('footer.svg', footer)]:
+for filename, content in [('divider.svg', divider), ('footer.svg', footer)]:
     ET.fromstring(content)
     (ASSETS / filename).write_text(content)
     print(filename, len(content.encode()), 'bytes')
