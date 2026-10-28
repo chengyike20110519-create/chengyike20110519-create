@@ -3,7 +3,7 @@
 <table>
 <tr>
 <td width="32%" align="center" valign="middle">
-  <a href="assets/yike-cheng.png"><img src="assets/yike-cheng.png?portrait=1" width="220" alt="Yike Cheng against a softly lit rainy-night city background"></a>
+  <a href="assets/yike-cheng.png"><img src="assets/yike-cheng.png?portrait=daylight" width="220" alt="Yike Cheng in a bright study space with natural daylight"></a>
 </td>
 <td width="68%" valign="middle">
   <h1>Hi, I'm Yike.</h1>
