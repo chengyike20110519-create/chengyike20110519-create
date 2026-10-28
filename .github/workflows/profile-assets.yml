@@ -1,0 +1,28 @@
+name: Profile image references
+
+on:
+  push:
+    paths:
+      - README.md
+      - assets/**
+      - scripts/check_profile_assets.py
+      - .github/workflows/profile-assets.yml
+  pull_request:
+    paths:
+      - README.md
+      - assets/**
+      - scripts/check_profile_assets.py
+      - .github/workflows/profile-assets.yml
+
+permissions:
+  contents: read
+
+jobs:
+  check-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: python scripts/check_profile_assets.py
