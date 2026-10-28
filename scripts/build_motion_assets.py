@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import xml.etree.ElementTree as ET
 
 ASSETS = Path(__file__).resolve().parents[1] / 'assets'
@@ -9,7 +10,30 @@ PHRASES = ['Stay curious. Make it real.', 'From questions to working tools.', 'A
 # clipping or animation cannot reveal several overlapping slogans.
 from PIL import Image, ImageDraw, ImageFont
 
-FONT = ImageFont.truetype('/System/Library/Fonts/Supplemental/Andale Mono.ttf', 40)
+def load_font():
+    override = os.environ.get('PROFILE_FONT')
+    if override:
+        try:
+            return ImageFont.truetype(override, 40)
+        except OSError as error:
+            raise SystemExit(f'Cannot load PROFILE_FONT: {override}') from error
+
+    candidates = [
+        '/System/Library/Fonts/Supplemental/Andale Mono.ttf',
+        str(Path(os.environ.get('WINDIR', 'C:/Windows')) / 'Fonts' / 'consola.ttf'),
+        '/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf',
+        '/usr/share/fonts/truetype/liberation2/LiberationMono-Regular.ttf',
+        'DejaVuSansMono.ttf',
+    ]
+    for candidate in candidates:
+        try:
+            return ImageFont.truetype(candidate, 40)
+        except OSError:
+            continue
+    return ImageFont.load_default(size=40)
+
+
+FONT = load_font()
 SIZE = (920, 84)
 THEMES = {'light': ('#ffffff', '#0969da'), 'dark': ('#0d1117', '#79c0ff')}
 
