@@ -1,12 +1,6 @@
 <p><samp>YIKE CHENG / STUDENT DEVELOPER</samp></p>
 
-<table>
-<tr>
-<td width="32%" align="center" valign="middle">
-  <a href="assets/yike-cheng.png"><img src="assets/yike-cheng.png?portrait=illustrated-vertical" width="280" alt="Illustrated portrait of Yike Cheng in a bright study space"></a>
-</td>
-<td width="68%" valign="middle">
-  <h1>Hi, I'm Yike.</h1>
+<h1>Hi, I'm Yike.</h1>
   <p><picture>
     <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="assets/typing-dark.png">
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/typing-light.png">
@@ -19,9 +13,7 @@
     <a href="#matrix-nova"><img src="https://img.shields.io/badge/Matrix_Nova-founder-6ca9ff?style=flat-square&amp;labelColor=21262d" alt="Matrix Nova founder"></a>
     <a href="https://github.com/chengyike20110519-create?tab=repositories"><img src="https://img.shields.io/badge/explore-my_projects-6ca9ff?style=flat-square&amp;labelColor=21262d" alt="Explore my projects"></a>
   </p>
-</td>
-</tr>
-</table>
+
 
 <img src="assets/divider.svg?motion=1" width="100%" height="8" alt="">
 
